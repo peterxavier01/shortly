@@ -1,0 +1,51 @@
+.form-section {
+    --clr-gray: hsla(0, 0%, 75%, 0.2);
+
+    background-color: var(--clr-gray);
+    padding-bottom: 5em;
+}
+
+.boost-section {
+    background-image: url(./assets/bg-boost-mobile.svg);
+    background-color: var(--clr-light-violet);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2em;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+
+    @media (width > 768px) {
+        padding: 3.5em;
+        background-image: url(./assets/bg-boost-desktop.svg);
+    }
+
+    h4 {
+        --text-body: 1.8rem;
+        text-align: center;
+
+        color: var(--clr-white);
+        font-size: var(--text-body);
+
+        @media (width > 768px) {
+            font-size: 3rem;
+        }
+    }
+
+    button {
+        background-color: var(--clr-cyan);
+        border-radius: 100px;
+        padding: 1em;
+        max-width: 200px;
+        width: 100%;
+        font-size: var(--text-body);
+
+        @media (width > 768px) {
+            max-width: 300px;
+        }
+    }
+}
