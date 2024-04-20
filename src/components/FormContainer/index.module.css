@@ -1,0 +1,61 @@
+.container {
+    width: 100%;
+    padding: 2em;
+    background-image: url(../../assets/bg-shorten-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--clr-light-violet);
+    border-radius: 8px;
+    max-width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: -5.5em;
+
+    @media (width > 768px) {
+        padding: 3.5em;
+        background-image: url(../../assets/bg-shorten-desktop.svg);
+    }
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    @media (width > 768px) {
+        flex-direction: row;
+    }
+
+    input {
+        width: 100%;
+        padding: 1.4em 1em;
+        border: none;
+        outline: none;
+        border-radius: 6px;
+        font-size: var(--text-sm);
+
+        @media (width > 768px) {
+            width: 80%;
+        }
+    }
+
+    ::placeholder {
+        font-size: var(--text-sm);
+        font-weight: var(--font-bold);
+        color: var(--clr-grayish-violet);
+    }
+
+    button {
+        width: 100%;
+        background-color: var(--clr-cyan);
+        border-radius: 8px;
+        padding: 1em;
+        text-transform: capitalize;
+        font-size: var(--text-body);
+
+        @media (width > 768px) {
+            width: 20%;
+        }
+    }
+}
