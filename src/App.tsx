@@ -4,6 +4,8 @@ import FormContainer from "./components/FormContainer";
 import Hero from "./components/Hero";
 import Stats from "./components/Stats";
 import Button from "./components/Button";
+import { m } from "framer-motion";
+import { ctaVariants } from "./lib/animations";
 
 function App() {
   return (
@@ -17,8 +19,15 @@ function App() {
         </section>
 
         <section className="boost-section">
-          <h4>Boost your links today</h4>
-          <Button>Get started</Button>
+          <m.div
+            variants={ctaVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <h4>Boost your links today</h4>
+            <Button>Get started</Button>
+          </m.div>
         </section>
       </main>
     </Layout>
