@@ -1,15 +1,32 @@
-import { stats } from "../../lib/utils";
+import { m } from "framer-motion";
+
 import Card from "../Card";
+
+import { stats } from "../../lib/utils";
+import { statsTextVariants } from "../../lib/animations";
+
 import classes from "./index.module.css";
 
 const Stats = () => {
   return (
     <div className={classes.container}>
-      <h2>Advanced Statistics</h2>
-      <p>
+      <m.h2
+        variants={statsTextVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        Advanced Statistics
+      </m.h2>
+      <m.p
+        variants={statsTextVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
         Track how your links are performing across the web with our advanced
         statistics dashboard
-      </p>
+      </m.p>
 
       <div className={classes.cardContainer}>
         {stats.map((stat, index) => (
