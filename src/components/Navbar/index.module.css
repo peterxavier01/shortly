@@ -8,6 +8,10 @@
         padding: 2em 5em;
     }
 
+    &>div:nth-of-type(1) {
+        margin-right: 2em;
+    }
+
     &>div:nth-of-type(3) {
         display: flex;
         align-items: center;
@@ -15,22 +19,12 @@
         width: 100%;
         background-color: var(--clr-very-dark-blue);
         border-radius: 10px;
+        margin-right: auto;
 
         @media (width > 768px) {
             flex-direction: row;
             background-color: transparent;
         }
-    }
-
-    .logo {
-        width: 100%;
-        display: block;
-        padding-right: 1em;
-
-        @media (width > 768px) {
-            padding-right: 2em;
-        }
-
     }
 }
 
