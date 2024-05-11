@@ -1,6 +1,3 @@
-import axios from "axios";
-import debounce from "lodash.debounce";
-
 import BrandIcon from "../assets/icon-brand-recognition.svg";
 import DetailsIcon from "../assets/icon-detailed-records.svg";
 import CustomizeIcon from "../assets/icon-fully-customizable.svg";
@@ -59,19 +56,6 @@ export const socialIcons = [
   { id: 14, name: "instagram", href: "#", src: Instagram },
 ];
 
-export const shortenUrl = debounce(async (longUrl: string) => {
-  try {
-    const res = await axios.get(
-      `https://ulvis.net/api.php?url=${longUrl}&private=1`
-    );
-
-    if (res.status === 200) {
-      return res.data;
-    } else {
-      throw new Error(`Error: ${res.status} ${res.statusText}`);
-    }
-  } catch (error) {
-    console.error("Error while shortening URL:", (error as Error)?.message);
-    throw error; // Rethrow the error to propagate it upwards
-  }
-}, 500); // Debounce time in milliseconds
+export function copyToClipBoard(str: string) {
+  return window.navigator.clipboard.writeText(str);
+}
